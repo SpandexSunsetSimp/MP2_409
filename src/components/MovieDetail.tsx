@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchMovieDetail, fetchPopularMovies, TMDB_IMAGE_BASE_URL } from '../api';
-import { MovieDetailData, MovieListItem } from '../types';
+import { MovieDetailData } from '../types';
 import './MovieDetail.css';
 
 export function MovieDetail() {
