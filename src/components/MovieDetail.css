@@ -1,0 +1,113 @@
+.movie-detail-view {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-detail-view::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .detail-content {
+        flex-direction: row;
+    }
+}
+
+.detail-poster {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    flex-shrink: 0;
+    align-self: center;
+}
+
+@media (min-width: 768px) {
+    .detail-poster {
+        align-self: flex-start;
+    }
+}
+
+
+.movie-info {
+    flex-grow: 1;
+    color: #e0e0e0;
+}
+
+.movie-info h1 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #01b4e4;
+}
+
+.movie-info .tagline {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #90cea1;
+}
+
+.movie-info p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.movie-info h3 {
+    color: #01b4e4;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.navigation-buttons button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #01b4e4;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.navigation-buttons button:hover:not(:disabled) {
+    background-color: #007bff;
+}
+
+.navigation-buttons button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
